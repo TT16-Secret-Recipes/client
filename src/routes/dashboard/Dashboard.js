@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import styled from "styled-components"
+import Header from '../home/components/Header'
 
 
 const Dashboard = (props) => {
@@ -19,18 +20,18 @@ const Dashboard = (props) => {
         <>
             <Header />
             <div>
-                <SectionTop>
+                <section>
                         <h1>Welcome </h1>
-                </SectionTop>
-                <SectionMid>  
+                </section>
+                <section>  
                     <div>
                         <button className="button" style={{marginBottom: `50%`}} onClick={Logout} >Log Out</button>
                     </div>
                     <div>
                         <button className="button primary" style={{marginBottom: `50%`}} onClick={getRecipes}>Get Recipes</button>
                     </div>
-                </SectionMid>
-                <SectionBottom>
+                </section>
+                <section>
                     {recipes.map((rec) => {
                         return ( <Resdiv key={rec.id}>
                             <CardImg width="100%" height="40%" src={rec.image_url}/>
@@ -42,7 +43,7 @@ const Dashboard = (props) => {
                         </Resdiv>
                             )    
                     })}
-                </SectionBottom>
+                </section>
             </div>
                 {recipes.map((rec) => {
                     return ( <Resdiv key={rec.id}>
@@ -55,7 +56,7 @@ const Dashboard = (props) => {
                     </Resdiv>
                         )    
                 })}
-        </div>
+        </>
     )
 }
 const Resdiv = styled.div`

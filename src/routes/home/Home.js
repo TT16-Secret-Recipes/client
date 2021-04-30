@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 const Home = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'assets/js/main.js'
+    script.src = '/assets/js/main.js'
     script.defer = true;
     document.body.appendChild(script);
     return () => {
