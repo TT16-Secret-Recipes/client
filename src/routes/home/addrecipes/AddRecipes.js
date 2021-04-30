@@ -135,7 +135,7 @@ const AddRecipes = () => {
 				/>
 			</Form.Group>
 
-			<button onClick={addIngredient(recipe)}>Add New Ingredient</button>
+			<button >Add New Ingredient</button>
 			</div>
 			<Footer />
 		</>
